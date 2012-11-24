@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+$:.unshift("/Library/RubyMotion/lib")
+require 'motion/project'
+
+Motion::Project::App.setup do |app|
+  # Use `rake config' to see complete project settings.
+  app.name = 'hack_09'
+  app.delegate_class = 'MapHacksAppDelegate'
+  app.frameworks = %w{UIKit Foundation CoreGraphics MapKit}
+end
