@@ -1,0 +1,572 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<constant name='AsyncSocketErrorDomain' type='@' const='true' declared_type='NSString*'/>
+<constant name='AsyncSocketException' type='@' const='true' declared_type='NSString*'/>
+<constant name='AsyncUdpSocketErrorDomain' type='@' const='true' declared_type='NSString*'/>
+<constant name='AsyncUdpSocketException' type='@' const='true' declared_type='NSString*'/>
+<enum name='AsyncSocketCFSocketError' value='-1'/>
+<enum name='AsyncSocketCanceledError' value='1'/>
+<enum name='AsyncSocketConnectTimeoutError' value='2'/>
+<enum name='AsyncSocketNoError' value='0'/>
+<enum name='AsyncSocketReadMaxedOutError' value='3'/>
+<enum name='AsyncSocketReadTimeoutError' value='4'/>
+<enum name='AsyncSocketWriteTimeoutError' value='5'/>
+<enum name='AsyncUdpSocketBadParameter' value='1'/>
+<enum name='AsyncUdpSocketCFSocketError' value='-1'/>
+<enum name='AsyncUdpSocketIPv4Unavailable' value='2'/>
+<enum name='AsyncUdpSocketIPv6Unavailable' value='3'/>
+<enum name='AsyncUdpSocketNoError' value='0'/>
+<enum name='AsyncUdpSocketReceiveTimeoutError' value='5'/>
+<enum name='AsyncUdpSocketSendTimeoutError' value='4'/>
+<class name='AsyncSocket'>
+<method selector='CRData' class_method='true'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='CRLFData' class_method='true'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='LFData' class_method='true'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='ZeroData' class_method='true'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='acceptOnInterface:port:error:'>
+<arg name='interface' type='@' index='0' declared_type='NSString*'/>
+<arg name='port' type='S' index='1' declared_type='UInt16'/>
+<arg name='errPtr' type='^@' index='2' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='acceptOnPort:error:'>
+<arg name='port' type='S' index='0' declared_type='UInt16'/>
+<arg name='errPtr' type='^@' index='1' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='canSafelySetDelegate'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='connectToAddress:error:'>
+<arg name='remoteAddr' type='@' index='0' declared_type='NSData*'/>
+<arg name='errPtr' type='^@' index='1' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='connectToAddress:withTimeout:error:'>
+<arg name='remoteAddr' type='@' index='0' declared_type='NSData*'/>
+<arg name='timeout' type='d' index='1' declared_type='NSTimeInterval'/>
+<arg name='errPtr' type='^@' index='2' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='connectToHost:onPort:error:'>
+<arg name='hostname' type='@' index='0' declared_type='NSString*'/>
+<arg name='port' type='S' index='1' declared_type='UInt16'/>
+<arg name='errPtr' type='^@' index='2' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='connectToHost:onPort:withTimeout:error:'>
+<arg name='hostname' type='@' index='0' declared_type='NSString*'/>
+<arg name='port' type='S' index='1' declared_type='UInt16'/>
+<arg name='timeout' type='d' index='2' declared_type='NSTimeInterval'/>
+<arg name='errPtr' type='^@' index='3' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='connectedAddress'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='connectedHost'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='connectedPort'>
+<retval type='S' declared_type='UInt16'/>
+</method>
+<method selector='delegate'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='description'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='disconnect'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='disconnectAfterReading'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='disconnectAfterReadingAndWriting'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='disconnectAfterWriting'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='enablePreBuffering'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='getCFReadStream'>
+<retval type='^{__CFReadStream=}' declared_type='CFReadStreamRef'/>
+</method>
+<method selector='getCFSocket'>
+<retval type='^{__CFSocket=}' declared_type='CFSocketRef'/>
+</method>
+<method selector='getCFWriteStream'>
+<retval type='^{__CFWriteStream=}' declared_type='CFWriteStreamRef'/>
+</method>
+<method selector='init'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithDelegate:'>
+<arg name='delegate' type='@' index='0' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithDelegate:userData:'>
+<arg name='delegate' type='@' index='0' declared_type='id'/>
+<arg name='userData' type='l' index='1' declared_type='long'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isConnected'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isIPv4'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isIPv6'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='localAddress'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='localHost'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='localPort'>
+<retval type='S' declared_type='UInt16'/>
+</method>
+<method selector='moveToRunLoop:'>
+<arg name='runLoop' type='@' index='0' declared_type='NSRunLoop*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='progressOfReadReturningTag:bytesDone:total:'>
+<arg name='tag' type='^l' index='0' declared_type='long*'/>
+<arg name='done' type='^i' index='1' declared_type='CFIndex*'/>
+<arg name='total' type='^i' index='2' declared_type='CFIndex*'/>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='progressOfWriteReturningTag:bytesDone:total:'>
+<arg name='tag' type='^l' index='0' declared_type='long*'/>
+<arg name='done' type='^i' index='1' declared_type='CFIndex*'/>
+<arg name='total' type='^i' index='2' declared_type='CFIndex*'/>
+<retval type='f' declared_type='float'/>
+</method>
+<method selector='readDataToData:withTimeout:maxLength:tag:'>
+<arg name='data' type='@' index='0' declared_type='NSData*'/>
+<arg name='timeout' type='d' index='1' declared_type='NSTimeInterval'/>
+<arg name='length' type='l' index='2' declared_type='CFIndex'/>
+<arg name='tag' type='l' index='3' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='readDataToData:withTimeout:tag:'>
+<arg name='data' type='@' index='0' declared_type='NSData*'/>
+<arg name='timeout' type='d' index='1' declared_type='NSTimeInterval'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='readDataToLength:withTimeout:tag:'>
+<arg name='length' type='l' index='0' declared_type='CFIndex'/>
+<arg name='timeout' type='d' index='1' declared_type='NSTimeInterval'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='readDataWithTimeout:tag:'>
+<arg name='timeout' type='d' index='0' declared_type='NSTimeInterval'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='runLoopModes'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' type='@' index='0' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setRunLoopModes:'>
+<arg name='runLoopModes' type='@' index='0' declared_type='NSArray*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='setUserData:'>
+<arg name='userData' type='l' index='0' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='startTLS:'>
+<arg name='tlsSettings' type='@' index='0' declared_type='NSDictionary*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='unreadData'>
+<retval type='@' declared_type='NSData*'/>
+</method>
+<method selector='userData'>
+<retval type='l' declared_type='long'/>
+</method>
+<method selector='writeData:withTimeout:tag:'>
+<arg name='data' type='@' index='0' declared_type='NSData*'/>
+<arg name='timeout' type='d' index='1' declared_type='NSTimeInterval'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<class name='AsyncUdpSocket'>
+<method selector='bindToAddress:port:error:'>
+<arg name='localAddr' type='@' index='0' declared_type='NSString*'/>
+<arg name='port' type='S' index='1' declared_type='UInt16'/>
+<arg name='errPtr' type='^@' index='2' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='bindToPort:error:'>
+<arg name='port' type='S' index='0' declared_type='UInt16'/>
+<arg name='errPtr' type='^@' index='1' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='close'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='closeAfterReceiving'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='closeAfterSending'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='closeAfterSendingAndReceiving'>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='connectToAddress:error:'>
+<arg name='remoteAddr' type='@' index='0' declared_type='NSData*'/>
+<arg name='errPtr' type='^@' index='1' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='connectToHost:onPort:error:'>
+<arg name='host' type='@' index='0' declared_type='NSString*'/>
+<arg name='port' type='S' index='1' declared_type='UInt16'/>
+<arg name='errPtr' type='^@' index='2' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='connectedHost'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='connectedPort'>
+<retval type='S' declared_type='UInt16'/>
+</method>
+<method selector='delegate'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='enableBroadcast:error:'>
+<arg name='flag' type='B' index='0' declared_type='BOOL'/>
+<arg name='errPtr' type='^@' index='1' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='init'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initIPv4'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initIPv6'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithDelegate:'>
+<arg name='delegate' type='@' index='0' declared_type='id'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithDelegate:userData:'>
+<arg name='delegate' type='@' index='0' declared_type='id'/>
+<arg name='userData' type='l' index='1' declared_type='long'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isClosed'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isConnected'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isIPv4'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isIPv6'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='joinMulticastGroup:error:'>
+<arg name='group' type='@' index='0' declared_type='NSString*'/>
+<arg name='errPtr' type='^@' index='1' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='joinMulticastGroup:withAddress:error:'>
+<arg name='group' type='@' index='0' declared_type='NSString*'/>
+<arg name='interface' type='@' index='1' declared_type='NSString*'/>
+<arg name='errPtr' type='^@' index='2' declared_type='NSError**'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='localHost'>
+<retval type='@' declared_type='NSString*'/>
+</method>
+<method selector='localPort'>
+<retval type='S' declared_type='UInt16'/>
+</method>
+<method selector='maxReceiveBufferSize'>
+<retval type='L' declared_type='UInt32'/>
+</method>
+<method selector='maximumTransmissionUnit'>
+<retval type='I' declared_type='unsigned int'/>
+</method>
+<method selector='moveToRunLoop:'>
+<arg name='runLoop' type='@' index='0' declared_type='NSRunLoop*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='receiveWithTimeout:tag:'>
+<arg name='timeout' type='d' index='0' declared_type='NSTimeInterval'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='runLoopModes'>
+<retval type='@' declared_type='NSArray*'/>
+</method>
+<method selector='sendData:toAddress:withTimeout:tag:'>
+<arg name='data' type='@' index='0' declared_type='NSData*'/>
+<arg name='remoteAddr' type='@' index='1' declared_type='NSData*'/>
+<arg name='timeout' type='d' index='2' declared_type='NSTimeInterval'/>
+<arg name='tag' type='l' index='3' declared_type='long'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='sendData:toHost:port:withTimeout:tag:'>
+<arg name='data' type='@' index='0' declared_type='NSData*'/>
+<arg name='host' type='@' index='1' declared_type='NSString*'/>
+<arg name='port' type='S' index='2' declared_type='UInt16'/>
+<arg name='timeout' type='d' index='3' declared_type='NSTimeInterval'/>
+<arg name='tag' type='l' index='4' declared_type='long'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='sendData:withTimeout:tag:'>
+<arg name='data' type='@' index='0' declared_type='NSData*'/>
+<arg name='timeout' type='d' index='1' declared_type='NSTimeInterval'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' type='@' index='0' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setMaxReceiveBufferSize:'>
+<arg name='max' type='L' index='0' declared_type='UInt32'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setRunLoopModes:'>
+<arg name='runLoopModes' type='@' index='0' declared_type='NSArray*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='setUserData:'>
+<arg name='userData' type='l' index='0' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='userData'>
+<retval type='l' declared_type='long'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='onSocket:didAcceptNewSocket:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='newSocket' type='@' index='1' declared_type='AsyncSocket*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocket:didConnectToHost:port:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='host' type='@' index='1' declared_type='NSString*'/>
+<arg name='port' type='S' index='2' declared_type='UInt16'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocket:didReadData:withTag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='data' type='@' index='1' declared_type='NSData*'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocket:didReadPartialDataOfLength:tag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='partialLength' type='l' index='1' declared_type='CFIndex'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocket:didWriteDataWithTag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocket:didWritePartialDataOfLength:tag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='partialLength' type='l' index='1' declared_type='CFIndex'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocket:shouldTimeoutReadWithTag:elapsed:bytesDone:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<arg name='elapsed' type='d' index='2' declared_type='NSTimeInterval'/>
+<arg name='length' type='l' index='3' declared_type='CFIndex'/>
+<retval type='d' declared_type='NSTimeInterval'/>
+</method>
+<method selector='onSocket:shouldTimeoutWriteWithTag:elapsed:bytesDone:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<arg name='elapsed' type='d' index='2' declared_type='NSTimeInterval'/>
+<arg name='length' type='l' index='3' declared_type='CFIndex'/>
+<retval type='d' declared_type='NSTimeInterval'/>
+</method>
+<method selector='onSocket:wantsRunLoopForNewSocket:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='newSocket' type='@' index='1' declared_type='AsyncSocket*'/>
+<retval type='@' declared_type='NSRunLoop*'/>
+</method>
+<method selector='onSocket:willDisconnectWithError:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='err' type='@' index='1' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocketDidDisconnect:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocketDidSecure:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onSocketWillConnect:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='onUdpSocket:didNotReceiveDataWithTag:dueToError:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<arg name='error' type='@' index='2' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onUdpSocket:didNotSendDataWithTag:dueToError:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<arg name='error' type='@' index='2' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onUdpSocket:didReceiveData:withTag:fromHost:port:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<arg name='data' type='@' index='1' declared_type='NSData*'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<arg name='host' type='@' index='3' declared_type='NSString*'/>
+<arg name='port' type='S' index='4' declared_type='UInt16'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='onUdpSocket:didSendDataWithTag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='onUdpSocketDidClose:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<informal_protocol name='AsyncSocketDelegate'>
+<method type='v16@0:4@8@12' selector='onSocket:didAcceptNewSocket:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='newSocket' type='@' index='1' declared_type='AsyncSocket*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v20@0:4@8@12S16' selector='onSocket:didConnectToHost:port:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='host' type='@' index='1' declared_type='NSString*'/>
+<arg name='port' type='S' index='2' declared_type='UInt16'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v20@0:4@8@12l16' selector='onSocket:didReadData:withTag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='data' type='@' index='1' declared_type='NSData*'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v20@0:4@8l12l16' selector='onSocket:didReadPartialDataOfLength:tag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='partialLength' type='l' index='1' declared_type='CFIndex'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v16@0:4@8l12' selector='onSocket:didWriteDataWithTag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v20@0:4@8l12l16' selector='onSocket:didWritePartialDataOfLength:tag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='partialLength' type='l' index='1' declared_type='CFIndex'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='d28@0:4@8l12d16l24' selector='onSocket:shouldTimeoutReadWithTag:elapsed:bytesDone:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<arg name='elapsed' type='d' index='2' declared_type='NSTimeInterval'/>
+<arg name='length' type='l' index='3' declared_type='CFIndex'/>
+<retval type='d' declared_type='NSTimeInterval'/>
+</method>
+<method type='d28@0:4@8l12d16l24' selector='onSocket:shouldTimeoutWriteWithTag:elapsed:bytesDone:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<arg name='elapsed' type='d' index='2' declared_type='NSTimeInterval'/>
+<arg name='length' type='l' index='3' declared_type='CFIndex'/>
+<retval type='d' declared_type='NSTimeInterval'/>
+</method>
+<method type='@16@0:4@8@12' selector='onSocket:wantsRunLoopForNewSocket:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='newSocket' type='@' index='1' declared_type='AsyncSocket*'/>
+<retval type='@' declared_type='NSRunLoop*'/>
+</method>
+<method type='v16@0:4@8@12' selector='onSocket:willDisconnectWithError:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<arg name='err' type='@' index='1' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='onSocketDidDisconnect:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='onSocketDidSecure:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='B12@0:4@8' selector='onSocketWillConnect:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncSocket*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+</informal_protocol>
+<informal_protocol name='AsyncUdpSocketDelegate'>
+<method type='v20@0:4@8l12@16' selector='onUdpSocket:didNotReceiveDataWithTag:dueToError:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<arg name='error' type='@' index='2' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v20@0:4@8l12@16' selector='onUdpSocket:didNotSendDataWithTag:dueToError:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<arg name='error' type='@' index='2' declared_type='NSError*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='B28@0:4@8@12l16@20S24' selector='onUdpSocket:didReceiveData:withTag:fromHost:port:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<arg name='data' type='@' index='1' declared_type='NSData*'/>
+<arg name='tag' type='l' index='2' declared_type='long'/>
+<arg name='host' type='@' index='3' declared_type='NSString*'/>
+<arg name='port' type='S' index='4' declared_type='UInt16'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method type='v16@0:4@8l12' selector='onUdpSocket:didSendDataWithTag:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<arg name='tag' type='l' index='1' declared_type='long'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method type='v12@0:4@8' selector='onUdpSocketDidClose:'>
+<arg name='sock' type='@' index='0' declared_type='AsyncUdpSocket*'/>
+<retval type='v' declared_type='void'/>
+</method>
+</informal_protocol>
+</signatures>

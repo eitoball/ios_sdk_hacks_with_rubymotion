@@ -1,0 +1,246 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E51D94116637ECF00FAE93C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E51D94016637ECF00FAE93C /* Foundation.framework */; };
+		4E51D94616637ECF00FAE93C /* AsyncSocket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E51D94516637ECF00FAE93C /* AsyncSocket.h */; };
+		4E51D94816637ECF00FAE93C /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E51D94716637ECF00FAE93C /* AsyncSocket.m */; };
+		4E51D95016637EFD00FAE93C /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E51D94F16637EFD00FAE93C /* AsyncUdpSocket.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4E51D93B16637ECF00FAE93C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				4E51D94616637ECF00FAE93C /* AsyncSocket.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4E51D93D16637ECF00FAE93C /* libAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E51D94016637ECF00FAE93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4E51D94416637ECF00FAE93C /* AsyncSocket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AsyncSocket-Prefix.pch"; sourceTree = "<group>"; };
+		4E51D94516637ECF00FAE93C /* AsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		4E51D94716637ECF00FAE93C /* AsyncSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		4E51D94E16637EFD00FAE93C /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncUdpSocket.h; sourceTree = "<group>"; };
+		4E51D94F16637EFD00FAE93C /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncUdpSocket.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E51D93A16637ECF00FAE93C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E51D94116637ECF00FAE93C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E51D93216637ECF00FAE93C = {
+			isa = PBXGroup;
+			children = (
+				4E51D94216637ECF00FAE93C /* AsyncSocket */,
+				4E51D93F16637ECF00FAE93C /* Frameworks */,
+				4E51D93E16637ECF00FAE93C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E51D93E16637ECF00FAE93C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E51D93D16637ECF00FAE93C /* libAsyncSocket.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E51D93F16637ECF00FAE93C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E51D94016637ECF00FAE93C /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E51D94216637ECF00FAE93C /* AsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				4E51D94516637ECF00FAE93C /* AsyncSocket.h */,
+				4E51D94716637ECF00FAE93C /* AsyncSocket.m */,
+				4E51D94E16637EFD00FAE93C /* AsyncUdpSocket.h */,
+				4E51D94F16637EFD00FAE93C /* AsyncUdpSocket.m */,
+				4E51D94316637ECF00FAE93C /* Supporting Files */,
+			);
+			path = AsyncSocket;
+			sourceTree = "<group>";
+		};
+		4E51D94316637ECF00FAE93C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E51D94416637ECF00FAE93C /* AsyncSocket-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E51D93C16637ECF00FAE93C /* AsyncSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E51D94B16637ECF00FAE93C /* Build configuration list for PBXNativeTarget "AsyncSocket" */;
+			buildPhases = (
+				4E51D93916637ECF00FAE93C /* Sources */,
+				4E51D93A16637ECF00FAE93C /* Frameworks */,
+				4E51D93B16637ECF00FAE93C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsyncSocket;
+			productName = AsyncSocket;
+			productReference = 4E51D93D16637ECF00FAE93C /* libAsyncSocket.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E51D93416637ECF00FAE93C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 4E51D93716637ECF00FAE93C /* Build configuration list for PBXProject "AsyncSocket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4E51D93216637ECF00FAE93C;
+			productRefGroup = 4E51D93E16637ECF00FAE93C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E51D93C16637ECF00FAE93C /* AsyncSocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E51D93916637ECF00FAE93C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E51D94816637ECF00FAE93C /* AsyncSocket.m in Sources */,
+				4E51D95016637EFD00FAE93C /* AsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4E51D94916637ECF00FAE93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4E51D94A16637ECF00FAE93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E51D94C16637ECF00FAE93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AsyncSocket.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AsyncSocket/AsyncSocket-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4E51D94D16637ECF00FAE93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/AsyncSocket.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AsyncSocket/AsyncSocket-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E51D93716637ECF00FAE93C /* Build configuration list for PBXProject "AsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E51D94916637ECF00FAE93C /* Debug */,
+				4E51D94A16637ECF00FAE93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E51D94B16637ECF00FAE93C /* Build configuration list for PBXNativeTarget "AsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E51D94C16637ECF00FAE93C /* Debug */,
+				4E51D94D16637ECF00FAE93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E51D93416637ECF00FAE93C /* Project object */;
+}
